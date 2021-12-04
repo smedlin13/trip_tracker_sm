@@ -13,7 +13,7 @@ const Users = ({ users }) => {
         <h3>{user.first_name} {user.last_name} Id: {user.id}</h3>
         <a href={`/users/${user.id}`}>Show</a>
         <a href={`/users/${user.id}/edit`}>Edit</a>
-        <a href={`/users/${users.id}`} data-method='delete'>
+        <a href={`/users/${user.id}`} data-method='delete'>
           Delete
         </a>
       </>
