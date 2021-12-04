@@ -10,7 +10,7 @@ const TripEdit = ({ user, trip }) => {
     return (
     <>
       <h1>Edit Trip</h1>
-      <form action={`user/${user.id}/trips/${trip.id}`} method="post">
+      <form action={`user/${user.id}/trips`} method="post">
         {/* need for the update */}
         <input type='hidden' name='_method' value="patch" /> 
         <input
@@ -31,7 +31,7 @@ const TripEdit = ({ user, trip }) => {
     
         <button type="submit">Update Trip</button>
       </form>
-      <a href="/trips">Back to Trip</a>
+      <a href={`/trips/${trip.id}`}>Back to Trip</a>
     </>
   )
 }

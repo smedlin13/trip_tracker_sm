@@ -4,6 +4,7 @@ const Trip = ({ trip }) => {
 
   // const { id, first_name, } = user
   const { name, duration, created_at, id } = trip
+  
   return (
     <>
       <h3>Trip Name: {name}</h3>
