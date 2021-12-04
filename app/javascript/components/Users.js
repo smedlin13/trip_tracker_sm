@@ -7,7 +7,7 @@ const Users = ({ users }) => {
   
       <h1>Users Page</h1>
       
-      <a href="/subs/new">Add New User</a>
+      <a href="/users/new">Add New User</a>
       { users.map( (user) => (
         <>
         <h3>{user.first_name} {user.last_name} Id: {user.id}</h3>
