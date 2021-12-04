@@ -10,7 +10,7 @@ const User = ({ user }) => {
       <h2>Password: {password} Created At: {created_at} Id: {id}</h2>
       <a href="/">Back</a>
       <br />
-      <a href={`/users/${id}/`}>See User Trips</a>
+      <a href={`/users/${user.id}/trips`}>See User Trips</a>
     </>
   )
 }
