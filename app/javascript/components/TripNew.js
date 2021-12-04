@@ -19,7 +19,7 @@ const TripNew = ({ user, trip }) => {
           name="trip[name]"
         />
         <input
-          type="integer"
+          type="text"
           placeholder="Duration"
           required
           defaultValue={defaultDuration}

@@ -15,7 +15,7 @@ const Trips = ({ user, trips }) => {
         <>
         <h3>{trip.name} Duration: {trip.duration} Id: {trip.id}</h3>
         <a href={`${url}/${trip.id}`}>Show</a>
-        <a href={`${url}`}>Edit</a>
+        <a href={`${url}/${trip.id}/edit`}>Edit</a>
         <a href={`${url}/${trip.id}`} data-method='delete'>
           Delete
         </a>

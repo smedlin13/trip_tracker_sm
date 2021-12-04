@@ -1,7 +1,8 @@
 import React from 'react';
 
-const TripEdit = ({ trip }) => {
+const TripEdit = ({ user, trip }) => {
 
+    const {id } = user
     const { name, duration } = trip
 
     const defaultName = name ? name : ""
@@ -9,7 +10,7 @@ const TripEdit = ({ trip }) => {
     return (
     <>
       <h1>Edit Trip</h1>
-      <form action={`/trips/${id}`} method="post">
+      <form action={`user/${user.id}/trips/${trip.id}`} method="post">
         {/* need for the update */}
         <input type='hidden' name='_method' value="patch" /> 
         <input
@@ -21,7 +22,7 @@ const TripEdit = ({ trip }) => {
           name="trip[name]"
         />
        <input
-          type="integer"
+          type="text"
           placeholder="Duration"
           required
           defaultValue={defaultDuration}

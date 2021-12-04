@@ -11,7 +11,7 @@ const Trip = ({ trip }) => {
       <h2>Created At: {created_at} Id: {trip.id}</h2>
       <a href="/">Back</a>
       <br />
-      <a href={`/users/${trip.id}/`}>See Trip Locations</a>
+      {/* <a href={`/users/${trip.id}/`}>See Trip Locations</a> */}
     </>
   )
 }
