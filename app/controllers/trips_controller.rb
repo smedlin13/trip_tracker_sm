@@ -33,14 +33,14 @@ class TripsController < ApplicationController
   def update
     @trip = @user.trips.find(params[:id])
     if @trip.update(trip_params)
-      redirect_to user_trips_path(@user)
+      redirect_to user_trips_path(@trip)
     else  
       render component: 'TripEdit', props: { user: @users, trip: @trip }
     end
   end
 
   def destroy
-    @trip = parent.trips.find(params[:id])
+    @trip = @user.trips.find(params[:id])
     @trip.destroy
     redirect_to trip_trips_path(@trip)
   end

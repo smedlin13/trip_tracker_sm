@@ -3,7 +3,8 @@ import React from 'react';
 const Trips = ({ user, trips }) => {
 
   const { first_name, last_name, id } = user
-  const url = `/users/${id}/trips`
+  const { name, duration } = trips
+  const url = `/users/${user.id}/trips`
   return (
     <>
   
@@ -12,10 +13,10 @@ const Trips = ({ user, trips }) => {
       <a href={`${url}/new`}>Add a New Trip </a>
       { trips.map( (trip) => (
         <>
-        <h3>{user.first_name} {user.last_name} Id: {user.id}</h3>
-        <a href={`${url}/${user.id}`}>Show</a>
-        <a href={`${url}/${user.id}edit`}>Edit</a>
-        <a href={`${url}/${user.id}`} data-method='delete'>
+        <h3>{trip.name} Duration: {trip.duration} Id: {trip.id}</h3>
+        <a href={`${url}/${trip.id}`}>Show</a>
+        <a href={`${url}`}>Edit</a>
+        <a href={`${url}/${trip.id}`} data-method='delete'>
           Delete
         </a>
       </>

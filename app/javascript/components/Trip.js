@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Trip = ({ user, trip }) => {
+const Trip = ({ trip }) => {
 
-  const { id, first_name, } = user
+  // const { id, first_name, } = user
   const { name, duration, created_at, id } = trip
   return (
     <>
